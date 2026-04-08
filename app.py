@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://your-frontend.onrender.com"],
+    allow_origins=["https://sultania-app.onrender.com"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
