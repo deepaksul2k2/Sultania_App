@@ -5,7 +5,6 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from fastapi.middleware.cors import CORSMiddleware
 
-
 # Device
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
