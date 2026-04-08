@@ -1,5 +1,5 @@
 fastapi
 uvicorn
-tensorflow
+torch
+torchvision
 pillow
-numpy
