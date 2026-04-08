@@ -3,7 +3,15 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
+from fastapi.middleware.cors import CORSMiddleware
 
+app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+)
 # Device
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
