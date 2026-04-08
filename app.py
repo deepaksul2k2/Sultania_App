@@ -5,6 +5,15 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 from fastapi.middleware.cors import CORSMiddleware
 
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://your-frontend.onrender.com"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -16,13 +25,6 @@ app.use(cors({
   origin: origin,
   credentials: true
 }));
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["https://your-frontend.onrender.com"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 # Device
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
